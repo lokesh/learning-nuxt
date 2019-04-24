@@ -1,8 +1,26 @@
 <template>
   <div>
+    <nuxt-link
+      v-if="showHome"
+      :to="{name: 'index' }"
+    >
+      Home
+    </nuxt-link>
+
+
     <nuxt />
   </div>
 </template>
+
+<script>
+export default {
+  computed: {
+    showHome() {
+      return this.$route.fullPath.length > 1;
+    }
+  }
+}
+</script>
 
 <style>
 html {

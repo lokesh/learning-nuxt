@@ -7,6 +7,10 @@ const tailwindJS = join(__dirname, 'tailwind.js')
 export default {
   mode: 'universal',
 
+  generate: {
+    routes: ['/posts/1', '/posts/2', '/posts/3']
+  },
+
   /*
    ** Headers of the page
    */
